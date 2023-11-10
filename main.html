@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script type="text/javascript">
+        function validateLogin() {
+            // 入力されたユーザ名とパスワードを取得
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // ユーザ名とパスワードのチェック
+            if (username === "admin" && password === "password") {
+                // ログイン成功時の処理
+                window.location.href = "index.html";
+            } else {
+                // ログイン失敗時の処理
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+        <input type="button" value="Login" onclick="validateLogin()">
+    </form>
+</body>
+</html>
